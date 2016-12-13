@@ -1,0 +1,52 @@
+.clearfix {
+  clear: both;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.results {
+
+}
+
+#game {
+  width: 960px;
+  margin: auto;
+}
+
+.you {
+  background-color: red;
+  height: 100px;
+  float: left;
+  width: 48%;
+  margin-top: 50px;
+  margin-right: 4%;
+  text-align: center;
+}
+
+.bot {
+  background-color: blue;
+  height: 100px;
+  float: left;
+  width: 48%;
+  margin-top: 50px;
+  text-align: center;
+}
+.container {
+  width: 960px;
+  margin: auto;
+}
+
+button {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: red;
+}
