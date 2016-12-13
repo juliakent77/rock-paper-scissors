@@ -1,16 +1,15 @@
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 var playerChoice;
+var playerScore = 0;
+var botScore = 0;
 
 var rockButton = document.getElementById('rock_button');
 var paperButton = document.getElementById('paper_button');
 var scissorsButton = document.getElementById('scissors_button');
 
-var myArray = ['Rock', 'Paper', 'Scissors']; 
+var myArray = ['rock', 'paper', 'scissors']; 
 
 var generateComputerChoice = function() {
-  myArray[Math.floor(Math.random() * myArray.length)];
+  return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
 rockButton.addEventListener('click', function() {
@@ -21,26 +20,41 @@ rockButton.addEventListener('click', function() {
 
 paperButton.addEventListener('click', function() {
   playerChoice = 'paper';
-  generateComputerChoice();
+  console.log ('paper');
+  console.log (generateComputerChoice());
 })
 
 scissorsButton.addEventListener('click', function() {
-  playerChoice = 'paper';
-  generateComputerChoice();
+  playerChoice = 'scissors';
+  console.log ('scissors');
+  console.log (generateComputerChoice());
 })
 
-if (playerChoice = 'rock' && generateComputerChoice()= 'scissors') {
-  'You win!'
-} if else (playerChoice = 'scissors' && generateComputerChoice()= 'paper') {
-  'You win!'
-} if else (playerChoice = 'paper' && generateComputerChoice()= 'rock') {
-  'You win!'
-} if else (playerChoice = 'scissors' && generateComputerChoice()= 'rock') {
-  'You lose!'
-} if else (playerChoice = 'paper' && generateComputerChoice()= 'scissors') {
-  'You lose!'
-} if else (playerChoice = 'rock' && generateComputerChoice()= 'paper') {
-  'You lose!'
-} else {
-  "It's a draw, try again..."
+if (playerChoice === 'rock' && generateComputerChoice() === 'scissors') {
+  console.log ('You win!');
+  playerScore++;
+} else if (playerChoice === 'scissors' && generateComputerChoice() === 'paper') {
+  console.log ('You win!');
+  playerScore++;
+} else if (playerChoice === 'paper' && generateComputerChoice() === 'rock') {
+  console.log ('You win!');
+  playerScore++;
+} else if (playerChoice === 'scissors' && generateComputerChoice() === 'rock') {
+  console.log ('You lose!');
+  botScore++;
+} else if (playerChoice === 'paper' && generateComputerChoice() === 'scissors') {
+  console.log ('You lose!');
+  botScore++;
+} else if (playerChoice === 'rock' && generateComputerChoice() === 'paper') {
+  console.log ('You lose!');
+  botScore++;
+} else if (playerChoice === 'rock' && generateComputerChoice() === 'rock') {
+  console.log ("It's a draw, try again...")
+} else if (playerChoice === 'paper' && generateComputerChoice() === 'paper') {
+  console.log ("It's a draw, try again...")
+} else if (playerChoice === 'scissors' && generateComputerChoice() === 'scissors') {
+  console.log ("It's a draw, try again...")
 }
+
+document.getElementById ('playerScore').innerHTML = playerScore;
+document.getElementById ('botScore').innerHMTL = botScore;
