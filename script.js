@@ -23,6 +23,11 @@ var displayWinner = function () {
   computerChoice.innerHTML = '<h2>The computer chose  ' + computerChoice + '</h2>';
   result.innerHTML = "<h1>" + winner + '</h1>';
 }
+// this is not displaying the player and computer choices for some reason.....
+
+
+// document.getElementById('result').innterHTML = '<h2>You chose ' + playerChoice + ' and they played ' + computerChoice + '</h2>';
+
 
 var checkWinner = function () {
   if(playerChoice === 'rock') {
