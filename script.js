@@ -6,29 +6,13 @@ var rockButton = document.getElementById('rock_button');
 var paperButton = document.getElementById('paper_button');
 var scissorsButton = document.getElementById('scissors_button');
 
-var myArray = ['rock', 'paper', 'scissors']; 
+var results;
 
+var myArray = ['rock', 'paper', 'scissors']; 
 var generateComputerChoice = function() {
   return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
-rockButton.addEventListener('click', function() {
-  playerChoice = 'rock';
-  console.log ('rock');
-  console.log (generateComputerChoice());
-})
-
-paperButton.addEventListener('click', function() {
-  playerChoice = 'paper';
-  console.log ('paper');
-  console.log (generateComputerChoice());
-})
-
-scissorsButton.addEventListener('click', function() {
-  playerChoice = 'scissors';
-  console.log ('scissors');
-  console.log (generateComputerChoice());
-})
 
 if (playerChoice === 'rock' && generateComputerChoice() === 'scissors') {
   console.log ('You win!');
@@ -58,3 +42,18 @@ if (playerChoice === 'rock' && generateComputerChoice() === 'scissors') {
 
 document.getElementById ('playerScore').innerHTML = playerScore;
 document.getElementById ('botScore').innerHMTL = botScore;
+
+rockButton.addEventListener('click', function() {
+  playerChoice = 'rock';
+  generateComputerChoice();
+})
+
+paperButton.addEventListener('click', function() {
+  playerChoice = 'paper';
+  generateComputerChoice();
+})
+
+scissorsButton.addEventListener('click', function() {
+  playerChoice = 'scissors';
+  generateComputerChoice();
+})
