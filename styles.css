@@ -1,45 +1,113 @@
-.clearfix {
+/*.clearfix {
   clear: both;
+}*/
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(239,69,103,1);
+    background: -moz-linear-gradient(top, rgba(239,69,103,1) 0%, rgba(107,29,45,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(239,69,103,1)), color-stop(100%, rgba(107,29,45,1)));
+    background: -webkit-linear-gradient(top, rgba(239,69,103,1) 0%, rgba(107,29,45,1) 100%);
+    background: -o-linear-gradient(top, rgba(239,69,103,1) 0%, rgba(107,29,45,1) 100%);
+    background: -ms-linear-gradient(top, rgba(239,69,103,1) 0%, rgba(107,29,45,1) 100%);
+    background: linear-gradient(to bottom, rgba(239,69,103,1) 0%, rgba(107,29,45,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4567', endColorstr='#6b1d2d', GradientType=0 );
+    color: white;
+    letter-spacing: 2px;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 50px;
 }
 
 h2 {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+footer h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+hr {
+  width: 20%;
+  border-color: white;
+  margin-top: 75px;
+}
+
+p {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .results {
 
 }
 
-#game {
-  width: 960px;
-  margin: auto;
-}
-
 .you {
-  background-color: red;
-  height: 100px;
-  float: left;
-  width: 48%;
-  margin-top: 50px;
-  margin-right: 4%;
+  width: 100%;
   text-align: center;
+  margin: 20px 0;
 }
 
 .bot {
-  background-color: blue;
   height: 100px;
-  float: left;
   width: 48%;
   margin-top: 50px;
   text-align: center;
-}
-.container {
-  width: 960px;
-  margin: auto;
 }
 
 button {
@@ -48,13 +116,87 @@ button {
 }
 
 footer {
-  background-color: red;
-}
-
-.playerScore {
 
 }
 
-.botScore {
-  
+#playerScore {
+
+}
+
+#botScore {
+
+}
+
+#results {
+
+}
+
+#computerChoice{
+
+}
+
+#playerChoice {
+
+}
+
+object {
+  width: 100px;
+  height: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  animation-name: pulse;
+  animation-duration: 1.5s; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: paused; 
+}
+
+object:hover {
+  animation-play-state: running;
+}
+
+#rock_button {
+    background-color: white;
+    border: none;
+    color: #EF4566;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+#paper_button {
+    background-color: white;
+    border: none;
+    color: #EF4566;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+#scissors_button {
+    background-color: white;
+    border: none;
+    color: #EF4566;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 35px;
+    margin-right: 32px;
+}
+
+#images {
+  padding-top: 50px;
+  padding-bottom: 5px;
 }
