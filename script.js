@@ -28,6 +28,7 @@ var displayWinner = function () {
 
 // document.getElementById('result').innterHTML = '<h2>You chose ' + playerChoice + ' and they played ' + computerChoice + '</h2>';
 
+// document.getElementById('choices').innterHTML = '<p>You played'  + playerChoice + '. The computer played ' + computerChoice +'</p>';
 
 var checkWinner = function () {
   if(playerChoice === 'rock') {
@@ -77,7 +78,7 @@ var generateComputerChoice = function() {
   } else {
     computerChoice = 'scissors';
   }
-  
+
   checkWinner();
 }
 
