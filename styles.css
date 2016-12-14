@@ -64,6 +64,7 @@ header h1 {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   margin-top: 65px;
+  font-weight: 400;
 }
 
 h2 {
@@ -75,12 +76,14 @@ h3 {
   font-size: 18px;
   text-align: center;
   margin-top: 60px;
+  font-weight: 400;
 }
 
 footer h3 {
   font-size: 18px;
-  text-align: center;
+  text-align: left;
 }
+
 
 hr {
   width: 20%;
@@ -116,15 +119,24 @@ button {
 }
 
 footer {
+  margin: 20px;
+}
 
+#scoreboard {
+  float: left;
+  overflow: hidden;
+  width: 150px;
 }
 
 #playerScore {
-
+  float: left;
+  overflow: hidden;
+  width: 75px;
 }
 
 #botScore {
-
+  overflow: hidden;
+  width: 115px;
 }
 
 #results {
@@ -170,6 +182,11 @@ object:hover {
     margin-right: 32px;
 }
 
+#rock_button:hover {
+  background-color: #75002A;
+  color: white;
+}
+
 #paper_button {
     background-color: white;
     border: none;
@@ -181,6 +198,11 @@ object:hover {
     font-size: 16px;
     margin-left: 32px;
     margin-right: 32px;
+}
+
+#paper_button:hover {
+  background-color: #75002A;
+  color: white;
 }
 
 #scissors_button {
@@ -196,7 +218,12 @@ object:hover {
     margin-right: 32px;
 }
 
+#scissors_button:hover {
+  background-color: #75002A;
+  color: white;
+}
+
 #images {
-  padding-top: 50px;
+  padding-top: 25px;
   padding-bottom: 5px;
 }
