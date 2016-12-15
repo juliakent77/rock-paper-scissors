@@ -53,6 +53,7 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0 0 60px; /* bottom = footer height */
 }
 
 h1 {
@@ -119,7 +120,15 @@ button {
 }
 
 footer {
-  margin: 20px;
+  margin: 0;
+  background-color: white;
+  color: #75002A;
+  width: 100%;
+  padding-left: 20px;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;
 }
 
 #scoreboard {
@@ -169,7 +178,7 @@ object:hover {
   animation-play-state: running;
 }
 
-#rock_button {
+button {
     background-color: white;
     border: none;
     color: #EF4566;
@@ -182,43 +191,7 @@ object:hover {
     margin-right: 32px;
 }
 
-#rock_button:hover {
-  background-color: #75002A;
-  color: white;
-}
-
-#paper_button {
-    background-color: white;
-    border: none;
-    color: #EF4566;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-left: 32px;
-    margin-right: 32px;
-}
-
-#paper_button:hover {
-  background-color: #75002A;
-  color: white;
-}
-
-#scissors_button {
-    background-color: white;
-    border: none;
-    color: #EF4566;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-left: 35px;
-    margin-right: 32px;
-}
-
-#scissors_button:hover {
+button:hover {
   background-color: #75002A;
   color: white;
 }
@@ -226,4 +199,10 @@ object:hover {
 #images {
   padding-top: 25px;
   padding-bottom: 5px;
+}
+
+button:focus {
+  outline:0;
+  background-color: #75002A;
+  color: white;
 }

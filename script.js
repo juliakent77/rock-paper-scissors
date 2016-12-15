@@ -63,8 +63,8 @@ var checkWinner = function () {
     }
   }
 displayWinner(); 
-document.getElementById('playerScore').innerHTML = playerScore;
-document.getElementById('botScore').innerHTML = botScore;
+document.getElementById('playerScore').innerHTML = '<h4>' + playerScore + '</h4>';
+document.getElementById('botScore').innerHTML = '<h4>' + botScore + '</h4>';
 // Ask about the displayWinner function within the checkWinner function!!!
 }
 
