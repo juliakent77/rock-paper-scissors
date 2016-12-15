@@ -19,8 +19,8 @@ var getRandomInt = function(min, max) {
 }
 
 var displayWinner = function () {
-  playerChoice.innerHTML = '<h2>Player Choice: ' + playerChoice + '</h2>';
-  computerChoice.innerHTML = '<h2>The computer chose  ' + computerChoice + '</h2>';
+  playerChoice.innerHTML = '<h2>You chose ' + playerChoice + '</h2>';
+  computerChoice.innerHTML = '<h2>They chose  ' + computerChoice + '</h2>';
   result.innerHTML = "<h1>" + winner + '</h1>';
 }
 // this is not displaying the player and computer choices for some reason.....
