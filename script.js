@@ -7,11 +7,13 @@ var scissorsButton = document.getElementById('scissors_button');
 
 
 var result = document.getElementById('results');
-var playerChoice = document.getElementById ('playerChoice');
-var computerChoice = document.getElementById ('computerChoice');
+var playerChoiceElem = document.getElementById ('playerChoice');
+var computerChoiceElem = document.getElementById ('computerChoice');
 
 var playerChoice;
 var computerChoice;
+// var playerChoice;
+// var computerChoice; HOW DO I MAKE THIS BETTER?
 var winner;
 
 var getRandomInt = function(min, max) {
@@ -19,12 +21,9 @@ var getRandomInt = function(min, max) {
 }
 
 var displayWinner = function () {
-  playerChoice.innerHTML = '<h2>You chose ' + playerChoice + '</h2>';
-  computerChoice.innerHTML = '<h2>They chose  ' + computerChoice + '</h2>';
+  computerChoiceElem.innerHTML = '<h5>They chose  <bold>' + computerChoice + '</bold></h5>';
   result.innerHTML = "<h1>" + winner + '</h1>';
 }
-// this is not displaying the player and computer choices for some reason.....
-
 
 // document.getElementById('result').innterHTML = '<h2>You chose ' + playerChoice + ' and they played ' + computerChoice + '</h2>';
 
@@ -63,9 +62,8 @@ var checkWinner = function () {
     }
   }
 displayWinner(); 
-document.getElementById('playerScore').innerHTML = '<h4>' + playerScore + '</h4>';
-document.getElementById('botScore').innerHTML = '<h4>' + botScore + '</h4>';
-// Ask about the displayWinner function within the checkWinner function!!!
+document.getElementById('playerScore').innerHTML = '<h4>' + playerScore + ' (you)</h4>';
+document.getElementById('botScore').innerHTML = '<h4>' + botScore + ' (them)</h4>';
 }
 
 

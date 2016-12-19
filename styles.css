@@ -89,7 +89,7 @@ footer h3 {
 hr {
   width: 20%;
   border-color: white;
-  margin-top: 75px;
+  margin-top: 50px;
 }
 
 p {
@@ -205,4 +205,11 @@ button:focus {
   outline:0;
   background-color: #75002A;
   color: white;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 40px;
 }
